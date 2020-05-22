@@ -1,0 +1,24 @@
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    background: #023436;
+    color: #03B5AA;
+    margin: 0px;
+}
+p {
+    font-size: 22px;
+}
+button, input {
+    padding: 4px 12px 4px 12px;
+    margin: 4px;
+    font-size: 18px;
+    background-color: #03B5AA;
+    border: 1px solid #7AF9F7
+}
+
+.product-btn {
+    font-size: smaller;
+}
