@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MessengerService } from 'src/app/services/messenger-service';
 import { Product } from 'src/app/models/product';
-import { isGeneratedFile } from '@angular/compiler/src/aot/util';
-
 
 @Component({
   selector: 'app-cart',
@@ -27,7 +25,7 @@ export class CartComponent implements OnInit {
     let productExists = false;
 
     for(let i in this.cartItems) {
-      if(this.cartItems[i].productId === product.id) {
+      if(this.cartItems[i].productId === product._id) {
         productExists = true
         this.cartItems[i].qty++
         break;
@@ -36,7 +34,7 @@ export class CartComponent implements OnInit {
     }
     if(!productExists) {
       this.cartItems.push({
-        productId: product.id,
+        productId: product._id,
         productName: product.name,
         qty: 1,
         price: product.price
