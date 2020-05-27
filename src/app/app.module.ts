@@ -13,6 +13,8 @@ import { NavComponent } from './components/shared/nav/nav.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CartItemComponent } from './components/shopping-cart/cart/cart-item/cart-item.component';
 import { ProductItemComponent } from './components/shopping-cart/product-list/product-item/product-item.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ProductItemComponent } from './components/shopping-cart/product-list/pr
     FooterComponent,
     NavComponent,
     CartItemComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
