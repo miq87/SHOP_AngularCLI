@@ -5,8 +5,7 @@ export class Product {
     price: number
     imgUrl: string
 
-    constructor(_id, name, description = '', price = 0,
-    imgUrl = 'https://5.imimg.com/data5/BX/VE/MY-9324435/dorna-ac-drive-500x500.jpg') {
+    constructor(_id, name, description = '', price = 0, imgUrl = '') {
         this._id = _id
         this.name = name
         this.description = description
