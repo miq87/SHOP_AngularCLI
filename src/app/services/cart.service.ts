@@ -37,6 +37,7 @@ export class CartService {
     )
   }
   addProductToCart(product: Product): Observable<any> {
-    return this.http.post(cartUrl, { product });
+    let productJSON = JSON.stringify(product)
+    return this.http.post(cartUrl, { productJSON })
   }
 }
