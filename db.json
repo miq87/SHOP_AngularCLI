@@ -18,6 +18,26 @@
         "imgUrl": "https://5.imimg.com/data5/BX/VE/MY-9324435/dorna-ac-drive-500x500.jpg"
       },
       "id": 1
+    },
+    {
+      "product": {
+        "_id": 1,
+        "name": "name",
+        "price": 900,
+        "description": "opisik",
+        "imgUrl": "https://5.imimg.com/data5/BX/VE/MY-9324435/dorna-ac-drive-500x500.jpg"
+      },
+      "id": 2
+    },
+    {
+      "product": {
+        "_id": 1,
+        "name": "name",
+        "price": 900,
+        "description": "opisik",
+        "imgUrl": "https://5.imimg.com/data5/BX/VE/MY-9324435/dorna-ac-drive-500x500.jpg"
+      },
+      "id": 3
     }
   ]
 }
