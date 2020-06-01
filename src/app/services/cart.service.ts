@@ -22,14 +22,14 @@ export class CartService {
           let productExists = false;
 
           for(let i in cartItems) {
-            if(cartItems[i].productId === item.product._id) {
+            if(cartItems[i].productId === item.productId) {
               cartItems[i].qty++
               productExists = true
               break;
             }
           }
           if(!productExists) {
-            cartItems.push(new CartItem(item.product))
+            cartItems.push(new CartItem(item))
           }
         }
         return cartItems

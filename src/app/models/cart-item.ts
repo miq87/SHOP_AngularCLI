@@ -1,7 +1,7 @@
 import { Product } from './product'
 
 export class CartItem {
-    productId: number
+    productId: string
     productName: string
     price: number
     qty: number
