@@ -29,7 +29,7 @@ export class CartService {
             }
           }
           if(!productExists) {
-            cartItems.push(new CartItem(item.id, item.product))
+            cartItems.push(new CartItem(item.product))
           }
         }
         return cartItems
@@ -37,7 +37,13 @@ export class CartService {
     )
   }
   addProductToCart(product: Product): Observable<any> {
-    let productJSON = JSON.stringify(product)
-    return this.http.post(cartUrl, { productJSON })
+    return this.http.post(cartUrl,
+      {
+        "productId": product._id,
+        "productName": product.name,
+        "price": product.price,
+        "qty": 1
+      }
+    )
   }
 }

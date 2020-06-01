@@ -1,14 +1,12 @@
 import { Product } from './product'
 
 export class CartItem {
-    id: number
     productId: number
     productName: string
     price: number
     qty: number
     
-    constructor(id: number, product: Product, qty = 1) {
-        this.id = id
+    constructor(product: Product, qty = 1) {
         this.productId = product._id
         this.productName = product.name
         this.price = product.price
