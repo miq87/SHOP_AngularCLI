@@ -39,7 +39,7 @@ export class CartService {
   addProductToCart(product: Product): Observable<any> {
     return this.http.post(cartUrl,
       {
-        "productId": product._id,
+        "_id": product._id,
         "productName": product.name,
         "price": product.price,
         "qty": 1
