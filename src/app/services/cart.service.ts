@@ -45,14 +45,12 @@ export class CartService {
     return this.http.delete(cartUrl + '/' + _id);
   }
   incProductInCart(_id: string): Observable<any> {
-    return this.http.patch(cartUrl, {
-      "action": "inc",
+    return this.http.patch(cartUrl + '/inc', {
       "_id": _id
     });
   }
   decProductInCart(_id: string): Observable<any> {
-    return this.http.patch(cartUrl, {
-      "action": "dec",
+    return this.http.patch(cartUrl + '/dec', {
       "_id": _id
     });
   }
