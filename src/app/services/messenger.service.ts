@@ -12,7 +12,6 @@ export class MessengerService {
     constructor() { }
 
     sendMsg(product: any) {
-        console.log(product)
         this.subject.next(product)
     }
     getMsg() {
