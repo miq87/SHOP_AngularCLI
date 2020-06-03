@@ -37,13 +37,23 @@ export class CartService {
     // )
   }
   addProductToCart(product: Product): Observable<any> {
-    return this.http.post(cartUrl,
-      {
-        "_id": product._id,
-        "productName": product.name,
-        "price": product.price,
-        "qty": 1
-      }
-    )
+    let cartItem = new CartItem(product)
+    let body = JSON.stringify(cartItem)
+    return this.http.post(cartUrl, JSON.parse(body))
+  }
+  delProductFromCart(_id: string): Observable<any> {
+    return this.http.delete(cartUrl + '/' + _id);
+  }
+  incProductInCart(_id: string): Observable<any> {
+    return this.http.patch(cartUrl, {
+      "action": "inc",
+      "_id": _id
+    });
+  }
+  decProductInCart(_id: string): Observable<any> {
+    return this.http.patch(cartUrl, {
+      "action": "dec",
+      "_id": _id
+    });
   }
 }

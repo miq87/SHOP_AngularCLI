@@ -21,7 +21,6 @@ export class ProductItemComponent implements OnInit {
     this.cart.addProductToCart(this.productItem).subscribe(() => {
       this.msg.sendMsg(this.productItem)
     })
-    
   }
 
 }
