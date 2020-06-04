@@ -10,7 +10,6 @@ import { User } from 'src/app/models/user';
 export class RegisterComponent implements OnInit {
 
   registerUserData = <any>{}
-
   registerValid = false
 
   constructor(private authService: AuthService) { }
@@ -18,12 +17,15 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    let body = JSON.stringify(this.registerUserData)
-    let bodyJSON = JSON.parse(body)
+    //let body = JSON.stringify(this.registerUserData)
+    //let bodyJSON = JSON.parse(body)
 
-    this.authService.registerUser(bodyJSON).subscribe(data => {
+    this.authService.registerUser(this.registerUserData).subscribe(data => {
       this.registerValid = true
       console.log(data)
+    },
+    err => {
+
     })
   }
 
