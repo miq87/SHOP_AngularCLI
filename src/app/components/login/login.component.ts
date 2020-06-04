@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
     this.authService.loginUser(this.loginUserData).subscribe(data => {
       console.log('Zalogowano!')
       console.log(data)
+      localStorage.setItem('token', data.token)
     },
     err => {
       console.log(err)
