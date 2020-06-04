@@ -13,11 +13,9 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   registerUser(userData) {
-    return this.http.post<any>(registerUrl, userData)
+    return this.http.post(registerUrl, userData)
   }
-
   loginUser(userData) {
-    return this.http.post<any>(loginUrl, userData)
+    return this.http.post(loginUrl, userData)
   }
-
 }

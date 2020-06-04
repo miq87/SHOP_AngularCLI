@@ -17,8 +17,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    //let body = JSON.stringify(this.registerUserData)
-    //let bodyJSON = JSON.parse(body)
+    console.log(this.registerUserData)
 
     this.authService.registerUser(this.registerUserData).subscribe(data => {
       this.registerValid = true
