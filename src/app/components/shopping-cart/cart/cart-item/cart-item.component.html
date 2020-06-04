@@ -3,10 +3,16 @@
     <div><strong>{{ cartItem.price }} zł</strong></div>
     <div><span>Ilość: {{ cartItem.qty }}</span></div>
     <div>
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <button class="btn btn-danger btn-sm" (click)="handleDelFromCart()">Usuń</button>
-            <button class="btn btn-primary btn-sm" (click)="handleDecrease()">-</button>
-            <button class="btn btn-success btn-sm" (click)="handleIncrease()">+</button>
+        <div class="btn-group" role="group" aria-label="cart buttons">
+            <button class="btn btn-danger" (click)="handleDelFromCart()">
+                <i class="far fa-trash-alt"></i>
+            </button>
+            <button class="btn btn-warning" (click)="handleDecrease()">
+                <i class="far fa-minus-square"></i>
+            </button>
+            <button class="btn btn-success" (click)="handleIncrease()">
+                <i class="far fa-plus-square"></i>
+            </button>
         </div>
     </div>
 </div>
