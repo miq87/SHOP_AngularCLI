@@ -12,7 +12,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  registerUser(userData: User): Observable<any> {
+  registerUser(userData: any): Observable<any> {
     return this.http.post(registerUrl, userData)
   }
 
