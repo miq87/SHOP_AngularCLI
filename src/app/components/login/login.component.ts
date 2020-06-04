@@ -17,12 +17,12 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.authService.loginUser(this.loginUserData).subscribe(data => {
-
+      console.log('Zalogowano!')
+      console.log(data)
     },
     err => {
       console.log(err)
     })
-    console.log(this.loginUserData)
   }
 
 }
