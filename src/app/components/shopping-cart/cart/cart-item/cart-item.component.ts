@@ -30,9 +30,15 @@ export class CartItemComponent implements OnInit {
     })
   }
   handleDecrease() {
-    this.cartService.decProductInCart(this.cartItem._id).subscribe(data => {
-      this.msg.sendMsg(this.cartItem)
-      console.log(data)
-    })
+    if(this.cartItem.qty == 1) {
+      this.handleDelFromCart()
+    }
+    else {
+      this.cartService.decProductInCart(this.cartItem._id).subscribe(data => {
+        this.msg.sendMsg(this.cartItem)
+        console.log(data)
+      })
+    }
   }
+
 }
