@@ -17,11 +17,10 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    console.log(this.registerUserData)
-
     this.authService.registerUser(this.registerUserData).subscribe(data => {
       this.registerValid = true
       console.log(data)
+      localStorage.setItem('token', data.token)
     },
     err => {
       console.log(err)
