@@ -4,12 +4,14 @@ import { LoginComponent } from '../components/login/login.component';
 import { RegisterComponent } from '../components/register/register.component';
 import { ShoppingCartComponent } from '../components/shopping-cart/shopping-cart.component';
 import { AuthGuard } from '../guard/auth.guard';
+import { OrderComponent } from '../components/order/order.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/shop', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'shop', component: ShoppingCartComponent, canActivate: [AuthGuard] }
+  { path: 'order', component: OrderComponent, canActivate: [AuthGuard] }
 ]
 
 @NgModule({

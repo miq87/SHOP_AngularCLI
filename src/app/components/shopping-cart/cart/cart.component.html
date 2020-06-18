@@ -8,6 +8,6 @@
         <span>{{ cartTotal | number:'1.2' }} zł</span>
     </li>
     <li class="list-group-item list-group-item-primary">
-        <button class="btn btn-success btn-md">Przejdź do zamówienia</button>
+        <button class="btn btn-success btn-md" [routerLink]="['/order']">Przejdź do zamówienia</button>
     </li>
 </ul>

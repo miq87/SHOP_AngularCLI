@@ -18,6 +18,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { AuthGuard } from './guard/auth.guard';
+import { OrderComponent } from './components/order/order.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AuthGuard } from './guard/auth.guard';
     CartItemComponent,
     ProductItemComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
