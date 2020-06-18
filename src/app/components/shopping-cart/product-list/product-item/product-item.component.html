@@ -4,10 +4,7 @@
     <hr>
     <img [src]="productItem.imgUrl" class="img-fluid">
     <hr>
-    <ul class="fa-ul">
-      <li><span class="fa-li"><i class="fas fa-check"></i></span>Single User</li>
-    </ul>
-    <h6 class="card-price text-center">{{ productItem.price | currency: "PLN " }}</h6>
+    <h6 class="card-price text-center">{{ productItem.price | number:'1.2' }} zł</h6>
     <hr>
     <div class="btn-group">
       <button class="btn btn-block btn-primary text-uppercase" (click)="handleAddToCart()">Dodaj do koszyka</button>
