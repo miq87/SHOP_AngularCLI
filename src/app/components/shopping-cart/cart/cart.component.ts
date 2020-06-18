@@ -22,6 +22,7 @@ export class CartComponent implements OnInit {
   }
   handleSubscription() {
     this.msg.getMsg().subscribe((product: Product) => {
+      console.log(product)
       this.loadCardItems()
     })
   }
@@ -35,6 +36,6 @@ export class CartComponent implements OnInit {
     this.cartTotal = 0
     this.cartItems.forEach(item => {
       this.cartTotal += (item.price * item.qty)
-    });
+    })
   }
 }
