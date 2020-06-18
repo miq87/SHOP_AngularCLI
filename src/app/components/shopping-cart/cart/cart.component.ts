@@ -22,7 +22,6 @@ export class CartComponent implements OnInit {
   }
   handleSubscription() {
     this.msg.getMsg().subscribe((product: Product) => {
-      console.log(product)
       this.loadCardItems()
     })
   }
