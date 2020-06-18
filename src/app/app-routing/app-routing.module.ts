@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/shop', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'shop', component: ShoppingCartComponent, canActivate: [AuthGuard] }
+  { path: 'shop', component: ShoppingCartComponent, canActivate: [AuthGuard] },
   { path: 'order', component: OrderComponent, canActivate: [AuthGuard] }
 ]
 
