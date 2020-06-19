@@ -17,7 +17,6 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
-import { AuthGuard } from './guard/auth.guard';
 import { OrderComponent } from './components/order/order.component';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 
@@ -45,11 +44,13 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     FontAwesomeModule,
     FormsModule
   ],
-  providers: [AuthGuard, {
-    provide: HTTP_INTERCEPTORS,
-    useClass: TokenInterceptorService,
-    multi: true
-  }],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
