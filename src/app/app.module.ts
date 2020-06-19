@@ -19,9 +19,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { OrderComponent } from './components/order/order.component';
 import { TokenInterceptorService } from './services/token-interceptor.service';
-import { AuthService } from './services/auth.service';
-import { AuthGuard } from './guard/auth.guard';
-
 
 @NgModule({
   declarations: [
@@ -47,7 +44,7 @@ import { AuthGuard } from './guard/auth.guard';
     FontAwesomeModule,
     FormsModule
   ],
-  providers: [ AuthService, AuthGuard,
+  providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,
