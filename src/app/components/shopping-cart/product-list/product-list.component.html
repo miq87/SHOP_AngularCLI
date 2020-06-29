@@ -1,7 +1,7 @@
 <section class="pricing py-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4" *ngFor="let product of productList">
+            <div class="col-lg-4" *ngFor="let product of productList | filter:2000">
                 <app-product-item [productItem]="product"></app-product-item>
             </div>
         </div>

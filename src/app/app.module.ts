@@ -19,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { OrderComponent } from './components/order/order.component';
 import { TokenInterceptorService } from './services/token-interceptor.service';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     ProductItemComponent,
     LoginComponent,
     RegisterComponent,
-    OrderComponent
+    OrderComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
