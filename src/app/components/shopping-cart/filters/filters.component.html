@@ -3,17 +3,16 @@
         <strong>Filtry</strong>
     </div>
     <div class="card-body">
-        <form>
+        <form (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="from">min:</label>
-                <input type="number" name="priceMin" class="form-control" [(ngModel)]="priceMin">
+                <input type="number" name="priceMin" class="form-control" [(ngModel)]="filterPrice[0]">
             </div>
             <div class="form-group">
                 <label for="to">max:</label>
-                <input type="number" name="priceMax" class="form-control" [(ngModel)]="priceMax">
-            </div>
-        
-            <button class="btn btn-primary btn-block">Filtruj po cenie</button>
+                <input type="number" name="priceMax" class="form-control" [(ngModel)]="filterPrice[1]">
+            </div>        
+            <button type="submit" class="btn btn-primary btn-block">Filtruj po cenie</button>
         </form>
     </div>
 </div>

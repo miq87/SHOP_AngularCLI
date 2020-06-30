@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/services/product.service';
+import { Product } from 'src/app/models/product';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  constructor() { }
+  productList : Product[] = []
+  filterPrice : number[] = [ 2000, 3400 ]
+
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
+    this.productService.getProducts().subscribe(products => {
+      this.productList = []
+      this.productList = products
+    })
+  }
+
+  onAddFilterPrice(filterPrice: number[]) {
+    this.filterPrice = filterPrice
   }
 
 }

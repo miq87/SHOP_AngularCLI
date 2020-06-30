@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filters',
@@ -7,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FiltersComponent implements OnInit {
 
-  priceMin : number
-  priceMax : number
+  filterPrice : number[] = []
+  @Output() filterPriceOut = new EventEmitter<number[]>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    this.filterPriceOut.emit(this.filterPrice)
   }
 
 }
