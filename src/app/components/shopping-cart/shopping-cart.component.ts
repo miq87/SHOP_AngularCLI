@@ -10,13 +10,12 @@ import { Product } from 'src/app/models/product';
 export class ShoppingCartComponent implements OnInit {
 
   productList : Product[] = []
-  filterPrice : number[] = [ 2000, 3400 ]
+  filterPrice : number[] = [ 0, 10000 ]
 
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(products => {
-      this.productList = []
       this.productList = products
     })
   }

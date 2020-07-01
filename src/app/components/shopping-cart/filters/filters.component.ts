@@ -13,10 +13,12 @@ export class FiltersComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    if(!this.filterPrice[0]) this.filterPrice[0] = 0
+    if(!this.filterPrice[1]) this.filterPrice[1] = 10000
+    this.filterPriceOut.emit(this.filterPrice)
   }
 
   onSubmit() {
-    this.filterPriceOut.emit(this.filterPrice)
   }
 
 }
