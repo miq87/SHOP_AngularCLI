@@ -14,7 +14,7 @@ export class FilterPipe implements PipeTransform {
     if(args[1] == null) args[1] = 10000
 
     value.forEach(element => {
-      if(element.price > args[0] && element.price < args[1]) {
+      if(element.price >= args[0] && element.price <= args[1]) {
         this.produkty.push(element)
       }
     })
